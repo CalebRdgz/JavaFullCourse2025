@@ -261,36 +261,96 @@ public class Main {
 //
 //        scanner.close();
 
-        Random random = new Random();
+//        Random random = new Random();
+//
+//        int number1;
+//        int number2;
+//        int number3;
+//
+//        // default range between -2billion and 2billion
+//        number1 = random.nextInt(1, 101); // random number between 1 and 100
+//        number2 = random.nextInt(1, 101);
+//        number3 = random.nextInt(1, 101);
+//
+//        System.out.println(number1);
+//        System.out.println(number2);
+//        System.out.println(number3);
+//
+//        double number;
+//
+//        number = random.nextDouble();
+//
+//        System.out.println(number);
+//
+//        boolean isHeads;
+//
+//        isHeads = random.nextBoolean();
+//
+//        if(isHeads){
+//            System.out.println("HEADS");
+//        }else{
+//            System.out.println("TAILS");
+//        }
 
-        int number1;
-        int number2;
-        int number3;
+//        System.out.println(Math.PI);
+//        System.out.println(Math.E);
 
-        // default range between -2billion and 2billion
-        number1 = random.nextInt(1, 101); // random number between 1 and 100
-        number2 = random.nextInt(1, 101);
-        number3 = random.nextInt(1, 101);
+//        double result;
+//        result = Math.pow(2, 5); //2 to the power of 5
+//        result = Math.abs(-5); //absolute value of 5 (always positive)
+//        result = Math.sqrt(9); //square root of 9 (3)
+//        result = Math.round(3.14);
+//        result = Math.ceil(3.14); //round up (ceiling)
+//        result = Math.floor(3.99); //round down (floor)
+//        result = Math.max(10, 20); //greater number (10 or 20?)
+//
+//        System.out.println(result);
 
-        System.out.println(number1);
-        System.out.println(number2);
-        System.out.println(number3);
+        //HYPOTENUSE c = Math.sqrt(a^2 + b^2)
 
-        double number;
+//        double a;
+//        double b;
+//        double c;
+//
+//        System.out.println("Find the hypotenuse of a Right triangle");
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the length of side A: ");
+//        a = scanner.nextDouble();
+//
+//        System.out.print("Enter the length of side B: ");
+//        b = scanner.nextDouble();
+//
+//        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+//
+//        System.out.println("The hypotenuse is " + c + "cm");
+//
+//        scanner.close();
 
-        number = random.nextDouble();
+        // circumference = 2 * Math.PI * radius;
+        // area = Math.PI * Math.pow(radius, 2);
+        // volume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
 
-        System.out.println(number);
+        Scanner scanner = new Scanner(System.in);
 
-        boolean isHeads;
+        double radius;
+        double circumference;
+        double area;
+        double volume;
 
-        isHeads = random.nextBoolean();
+        System.out.print("Enter the radius: ");
+        radius = scanner.nextDouble();
 
-        if(isHeads){
-            System.out.println("HEADS");
-        }else{
-            System.out.println("TAILS");
-        }
+        circumference = 2 * Math.PI * radius;
+
+        area = Math.PI * Math.pow(radius, 2);
+
+        volume = (4.0/3.0) * Math.PI * Math.pow(radius, 3);
+
+        System.out.printf("The circumference is: %.1fcm\n", circumference);
+        System.out.printf("The area is: %.1fcm²\n", area);
+        System.out.printf("The volume is: %.1fcm³\n", volume);
+
+        scanner.close();
 
     }
 }
