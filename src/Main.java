@@ -120,32 +120,74 @@ public class Main {
 //
 //        scanner.close();
 
-        //MAD LIBS GAME
-        Scanner scanner = new Scanner(System.in);
+//        //MAD LIBS GAME
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String adjective1;
+//        String noun1;
+//        String adjective2;
+//        String verb1;
+//        String adjective3;
+//
+//        System.out.print("\nEnter an adjective (description): ");
+//        adjective1 = scanner.nextLine();
+//        System.out.print("Enter a noun (animal or person): ");
+//        noun1 = scanner.nextLine();
+//        System.out.print("Enter an adjective (description): ");
+//        adjective2 = scanner.nextLine();
+//        System.out.print("Enter a verb ending with -ing (action): ");
+//        verb1 = scanner.nextLine();
+//        System.out.print("Enter an adjective (description): ");
+//        adjective3 = scanner.nextLine();
+//
+//        System.out.println("Today I went to a " + adjective1 + " zoo.");
+//        System.out.println("In an exhibit, I saw a " + noun1 + ".");
+//        System.out.println(noun1 + " was " + adjective2 + " and " + verb1 + "!");
+//        System.out.println("I was " + adjective3 + "!");
+//
+//        scanner.close();
 
-        String adjective1;
-        String noun1;
-        String adjective2;
-        String verb1;
-        String adjective3;
+        //ARITHMETIC OPERATORS
 
-        System.out.print("\nEnter an adjective (description): ");
-        adjective1 = scanner.nextLine();
-        System.out.print("Enter a noun (animal or person): ");
-        noun1 = scanner.nextLine();
-        System.out.print("Enter an adjective (description): ");
-        adjective2 = scanner.nextLine();
-        System.out.print("Enter a verb ending with -ing (action): ");
-        verb1 = scanner.nextLine();
-        System.out.print("Enter an adjective (description): ");
-        adjective3 = scanner.nextLine();
+//        int x = 10;
+//        int y = 3;
+//        int z;
 
-        System.out.println("Today I went to a " + adjective1 + " zoo.");
-        System.out.println("In an exhibit, I saw a " + noun1 + ".");
-        System.out.println(noun1 + " was " + adjective2 + " and " + verb1 + "!");
-        System.out.println("I was " + adjective3 + "!");
+//        z = x + y;
+//        z = x - y;
+//        z = x * y;
+//        z = x / y;
+//        z = x % y; //check if a number is even or odd (divisible or has a left over)
 
-        scanner.close();
+//        System.out.println(z);
+
+        //Augmented Assignment Operators
+
+//        int x = 10;
+//        int y = 3;
+
+//        x += y;
+//        x -= y;
+//        x *= y;
+//        x /= y;
+//        x %= y;
+//
+//        System.out.println(x);
+
+        //Increment and Decrement Operators
+
+//        int x = 1;
+//
+//        x--;
+//        x--;
+//
+//        System.out.println(x);
+
+        //ORDER OF OPERATIONS [P-E-M-D-A-S]
+//        double result = 3 + 4 * (7-5) / 2.0;
+//        System.out.println(result);
+
+
 
     }
 }
