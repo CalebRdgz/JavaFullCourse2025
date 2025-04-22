@@ -187,6 +187,29 @@ public class Main {
 //        double result = 3 + 4 * (7-5) / 2.0;
 //        System.out.println(result);
 
+        //SHOPPING CART PROGRAM
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String item = "";
+//        double price = 0;
+//        int quantity = 0;
+//        char currency = '$';
+//        double total = 0;
+//
+//        System.out.print("What item would you like to buy?: ");
+//        item = scanner.nextLine();
+//        System.out.print("What is the price for each?: ");
+//        price = scanner.nextDouble();
+//        System.out.print("How many would you like?: ");
+//        quantity = scanner.nextInt();
+//
+//        total = quantity * price;
+//
+//        System.out.println("\nYou have bought " + quantity + " " + item + "/s");
+//        System.out.println("Your total is " + currency + total);
+//
+//        scanner.close();
+
 
 
     }
