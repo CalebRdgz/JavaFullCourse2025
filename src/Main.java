@@ -330,27 +330,77 @@ public class Main {
         // area = Math.PI * Math.pow(radius, 2);
         // volume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        double radius;
+//        double circumference;
+//        double area;
+//        double volume;
+//
+//        System.out.print("Enter the radius: ");
+//        radius = scanner.nextDouble();
+//
+//        circumference = 2 * Math.PI * radius;
+//
+//        area = Math.PI * Math.pow(radius, 2);
+//
+//        volume = (4.0/3.0) * Math.PI * Math.pow(radius, 3);
+//
+//        System.out.printf("The circumference is: %.1fcm\n", circumference);
+//        System.out.printf("The area is: %.1fcm²\n", area);
+//        System.out.printf("The volume is: %.1fcm³\n", volume);
+//
+//        scanner.close();
 
-        double radius;
-        double circumference;
-        double area;
-        double volume;
+        // printf
 
-        System.out.print("Enter the radius: ");
-        radius = scanner.nextDouble();
+        // printf() = is a method used to format output
 
-        circumference = 2 * Math.PI * radius;
+        // %[flags][width][.precision][specifier-character]
 
-        area = Math.PI * Math.pow(radius, 2);
+//        String name = "Spongebob";
+//        char firstLetter = 'S';
+//        int age = 30;
+//        double height = 60.5;
+//        boolean isEmployed = true;
+//
+//        System.out.printf("Hello %s\n", name); //intert a string = %s,
+//        System.out.printf("Your name starts with a %c\n", firstLetter); //use \n for a new line
+//        System.out.printf("You are %d years old \n", age);
+//        System.out.printf("You are %.1f inches tall\n", height);
+//        System.out.printf("Employed: %b\n", isEmployed);
+//
+//        System.out.printf("%s is %d years old", name, age);
 
-        volume = (4.0/3.0) * Math.PI * Math.pow(radius, 3);
+        // + = output a plus
+        // , = comma grouping separator
+        // ( = negative numbers are enclosed in ()
+        // space = display a minus if negative, space if positive (good for aligning numbers)
 
-        System.out.printf("The circumference is: %.1fcm\n", circumference);
-        System.out.printf("The area is: %.1fcm²\n", area);
-        System.out.printf("The volume is: %.1fcm³\n", volume);
+//        double price1 = 9.99;
+//        double price2 = 100.15;
+//        double price3 = -54.01;
+//
+//        System.out.printf("% .2f\n", price1);
+//        System.out.printf("% .2f\n", price2);
+//        System.out.printf("% .2f\n", price3);
 
-        scanner.close();
+        // [width]
+
+        // 0 = zero padding
+        // number - right justified padding
+        // negative number - left justified padding
+
+        int id1 = 1;
+        int id2 = 23;
+        int id3 = 456;
+        int id4 = 7890;
+
+        System.out.printf("%-4d\n", id1);
+        System.out.printf("%-4d\n", id2);
+        System.out.printf("%-4d\n", id3);
+        System.out.printf("%-4d\n", id4);
+
 
     }
 }
