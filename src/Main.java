@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Main {
 
     public static void main(String[] args){ //need this method so that our program can run
@@ -212,53 +213,84 @@ public class Main {
 
         // if statement = performs a block of code if it's condition is true
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String name;
+//        int age;
+//        boolean isStudent;
+//
+//        System.out.print("Enter your name: ");
+//        name = scanner.nextLine();
+//
+//        System.out.print("Enter your age: ");
+//        age = scanner.nextInt();
+//
+//        System.out.print("Are you a student? (true/false): ");
+//        isStudent = scanner.nextBoolean();
+//
+//        //GROUP 1 - asking for your name
+//        if(name.isEmpty()){
+//            System.out.println("You didn't enter your name! 😡");
+//        }else{
+//            System.out.println("Hello " + name + "! 😄");
+//        }
+//
+//        //GROUP 2 - checking your age
+//        if(age >= 65){
+//            System.out.println("You are a senior! 👴");
+//        }
+//        else if(age >= 18){
+//            System.out.println("You are an adult! 👨");
+//        }
+//        else if(age == 0){
+//            System.out.println("You are a baby! 👶");
+//        }
+//        else if(age < 0){
+//            System.out.println("You haven't been born yet! 👼");
+//        }
+//        else{
+//            System.out.println("You are a child! 👧");
+//        }
+//
+//        //GROUP 3 - checking if you are a student
+//        if(isStudent){
+//            System.out.println("You are a student! 🧑‍🎓");
+//        }else{
+//            System.out.println("You are NOT a student 💼");
+//        }
+//
+//        scanner.close();
 
-        String name;
-        int age;
-        boolean isStudent;
+        Random random = new Random();
 
-        System.out.print("Enter your name: ");
-        name = scanner.nextLine();
+        int number1;
+        int number2;
+        int number3;
 
-        System.out.print("Enter your age: ");
-        age = scanner.nextInt();
+        // default range between -2billion and 2billion
+        number1 = random.nextInt(1, 101); // random number between 1 and 100
+        number2 = random.nextInt(1, 101);
+        number3 = random.nextInt(1, 101);
 
-        System.out.print("Are you a student? (true/false): ");
-        isStudent = scanner.nextBoolean();
+        System.out.println(number1);
+        System.out.println(number2);
+        System.out.println(number3);
 
-        //GROUP 1 - asking for your name
-        if(name.isEmpty()){
-            System.out.println("You didn't enter your name! 😡");
+        double number;
+
+        number = random.nextDouble();
+
+        System.out.println(number);
+
+        boolean isHeads;
+
+        isHeads = random.nextBoolean();
+
+        if(isHeads){
+            System.out.println("HEADS");
         }else{
-            System.out.println("Hello " + name + "! 😄");
+            System.out.println("TAILS");
         }
-
-        //GROUP 2 - checking your age
-        if(age >= 65){
-            System.out.println("You are a senior! 👴");
-        }
-        else if(age >= 18){
-            System.out.println("You are an adult! 👨");
-        }
-        else if(age == 0){
-            System.out.println("You are a baby! 👶");
-        }
-        else if(age < 0){
-            System.out.println("You haven't been born yet! 👼");
-        }
-        else{
-            System.out.println("You are a child! 👧");
-        }
-
-        //GROUP 3 - checking if you are a student
-        if(isStudent){
-            System.out.println("You are a student! 🧑‍🎓");
-        }else{
-            System.out.println("You are NOT a student 💼");
-        }
-
-        scanner.close();
 
     }
 }
