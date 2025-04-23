@@ -431,33 +431,78 @@ public class Main {
 
         //NESTED IF STATEMENTS
 
-        boolean isStudent = true; //is student, 10% discount
-        boolean isSenior = true; //if senior, 20% senior discount. If both, 30% discount
-        double price = 9.99;
+//        boolean isStudent = true; //is student, 10% discount
+//        boolean isSenior = true; //if senior, 20% senior discount. If both, 30% discount
+//        double price = 9.99;
+//
+//        if(isStudent){
+//            if(isSenior){
+//                System.out.println("You get a senior discount of %20");
+//                System.out.println("You get a student discount of %10");
+//                price *= 0.7;
+//            }
+//            else{
+//                System.out.println("You get a student discount of 10%");
+//                price *= 0.9;
+//            }
+//
+//        }
+//        else{
+//            if(isSenior){
+//                System.out.println("You get a senior discount of 20%");
+//                price *= 0.8;
+//            }
+//            else {
+//            price *= 1; //visualization
+//            }
+//        }
+//        System.out.printf("The price of a ticket is: $%.2f", price);
 
-        if(isStudent){
-            if(isSenior){
-                System.out.println("You get a senior discount of %20");
-                System.out.println("You get a student discount of %10");
-                price *= 0.7;
-            }
-            else{
-                System.out.println("You get a student discount of 10%");
-                price *= 0.9;
-            }
+        //STRING METHODS
+        String name = "Password";
 
-        }
-        else{
-            if(isSenior){
-                System.out.println("You get a senior discount of 20%");
-                price *= 0.8;
-            }
-            else {
-            price *= 1; //visualization
-            }
-        }
-        System.out.printf("The price of a ticket is: $%.2f", price);
+//        int length = name.length(); //get the length of name
+//        char letter = name.charAt(0); //get the char at index 0
+//        int index = name.indexOf("e"); //find FIRST occurrence of "e" in name
+//        int lastIndex = name.lastIndexOf("o"); //find the LAST occurrence of "e" in name
 
+//        name = name.toUpperCase(); //uppercase all letters in name
+//        name = name.toLowerCase(); //lowercase all letters in name
+//        name = name.trim(); //remove white space before or after name
+//        name = name.replace("e", "o"); //replace "e" with "o"
+
+        //methods that return boolean values:
+//        System.out.println(name.isEmpty()); //check if name is empty
+//
+//        if (name.isEmpty()){
+//            System.out.println("Your name is empty");
+//        }
+//        else{
+//            System.out.printf("Hello %s\n", name);
+//        }
+
+        //check if name contains any spaces:
+//        if (name.contains(" ")){
+//            System.out.println("Your name contains a space");
+//        }
+//        else{
+//            System.out.println("Your name DOESN'T contain any spaces");
+//        }
+
+        //check if two strings are equal:
+//        if (name.equalsIgnoreCase("password")){
+//            System.out.println("Your name can't be password");
+//        }
+//        else{
+//            System.out.println("Hello " + name);
+//        }
+
+
+//        System.out.println(length);
+//        System.out.println(letter);
+//        System.out.println(index);
+//        System.out.println(lastIndex);
+//        System.out.println(name);
 
 
 
