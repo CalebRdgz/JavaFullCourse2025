@@ -504,7 +504,32 @@ public class Main {
 //        System.out.println(lastIndex);
 //        System.out.println(name);
 
+        //SUBSTRINGS
+        //.substring() = Method used to extract a portion of a string
+        // string.substring(start, end)
 
+        //email slicer program:
+        String email;
+        String username;
+        String domain;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your email: ");
+        email = scanner.nextLine();
+
+        if(email.contains("@")){
+            username = email.substring(0, email.indexOf("@")); //get everything before the @
+            domain = email.substring(email.indexOf("@") + 1); //get everything after the @
+
+            System.out.println("Your username: " +username);
+            System.out.println("Your domain: " +domain);
+        }
+        else{
+            System.out.println("Emails must contain @");
+        }
+
+        scanner.close();
 
     }
 }
