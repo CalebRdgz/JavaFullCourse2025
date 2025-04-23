@@ -391,16 +391,43 @@ public class Main {
         // number - right justified padding
         // negative number - left justified padding
 
-        int id1 = 1;
-        int id2 = 23;
-        int id3 = 456;
-        int id4 = 7890;
+//        int id1 = 1;
+//        int id2 = 23;
+//        int id3 = 456;
+//        int id4 = 7890;
+//
+//        System.out.printf("%-4d\n", id1);
+//        System.out.printf("%-4d\n", id2);
+//        System.out.printf("%-4d\n", id3);
+//        System.out.printf("%-4d\n", id4);
 
-        System.out.printf("%-4d\n", id1);
-        System.out.printf("%-4d\n", id2);
-        System.out.printf("%-4d\n", id3);
-        System.out.printf("%-4d\n", id4);
+        //COMPOUND INTEREST CALCULATOR
 
+        Scanner scanner = new Scanner(System.in);
+
+        double principal;
+        double rate;
+        int timesCompounded;
+        int years;
+        double amount;
+
+        System.out.print("Enter the principal amount: ");
+        principal = scanner.nextDouble();
+
+        System.out.print("Enter the interest rate (in %): ");
+        rate = scanner.nextDouble() / 100; //divide by 100 to turn 7 -> 0.07 for example
+
+        System.out.print("Enter the number of times compounded per year: ");
+        timesCompounded = scanner.nextInt();
+
+        System.out.print("Enter the number of years: ");
+        years = scanner.nextInt();
+
+        amount = principal * Math.pow(1 + (rate/timesCompounded), (timesCompounded * years));
+
+        System.out.printf("The amount after %d is $%.2f", years, amount);
+
+        scanner.close();
 
     }
 }
