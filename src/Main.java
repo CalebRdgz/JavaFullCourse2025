@@ -522,8 +522,8 @@ public class Main {
             username = email.substring(0, email.indexOf("@")); //get everything before the @
             domain = email.substring(email.indexOf("@") + 1); //get everything after the @
 
-            System.out.println("Your username: " +username);
-            System.out.println("Your domain: " +domain);
+            System.out.printf("Your username: %s\n", username);
+            System.out.printf("Your domain: %s\n", domain);
         }
         else{
             System.out.println("Emails must contain @");
