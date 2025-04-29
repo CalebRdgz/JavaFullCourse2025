@@ -534,41 +534,75 @@ public class Main {
         //WEIGHT CONVERSION PROGRAM
 
         //Declare variables
-        Scanner scanner = new Scanner(System.in);
-        double weight;
-        double newWeight;
-        int choice;
+//        Scanner scanner = new Scanner(System.in);
+//        double weight;
+//        double newWeight;
+//        int choice;
+//
+//        //Welcome message
+//        System.out.println("Weight conversion program");
+//        System.out.println("1: Convert lbs to kgs");
+//        System.out.println("2: Convert kgs to lbs");
+//
+//        //prompt for user choice
+//        System.out.print("Choose an option: ");
+//        choice = scanner.nextInt();
+//        //option 1: convert lbs to kgs
+//        if(choice == 1){
+//            System.out.print("Enter the weight in lbs: ");
+//            weight = scanner.nextDouble();
+//            newWeight = weight * 0.453592;
+//            System.out.printf("The new weight in kgs is: %.2f\n", newWeight);
+//        }
+//        //option 2: convert kgs to lbs
+//        else if(choice == 2){
+//            System.out.print("Enter the weight in kgs: ");
+//            weight = scanner.nextDouble();
+//            newWeight = weight * 2.20462;
+//            System.out.printf("The new weight in lbs is: %.2f\n", newWeight);
+//        }
+//        //else print: not a valid choice≈
+//        else{
+//            System.out.println("That was not a valid choice");
+//        }
+//
+//        scanner.close();
 
-        //Welcome message
-        System.out.println("Weight conversion program");
-        System.out.println("1: Convert lbs to kgs");
-        System.out.println("2: Convert kgs to lbs");
+        // TERNARY OPERATOR
 
-        //prompt for user choice
-        System.out.print("Choose an option: ");
-        choice = scanner.nextInt();
-        //option 1: convert lbs to kgs
-        if(choice == 1){
-            System.out.print("Enter the weight in lbs: ");
-            weight = scanner.nextDouble();
-            newWeight = weight * 0.453592;
-            System.out.printf("The new weight in kgs is: %.2f\n", newWeight);
-        }
-        //option 2: convert kgs to lbs
-        else if(choice == 2){
-            System.out.print("Enter the weight in kgs: ");
-            weight = scanner.nextDouble();
-            newWeight = weight * 2.20462;
-            System.out.printf("The new weight in lbs is: %.2f\n", newWeight);
-        }
-        //else print: not a valid choice≈
-        else{
-            System.out.println("That was not a valid choice");
-        }
+        // variable = (condition) ? ifTrue : ifFalse;
+
+//        int score = 75;
+//
+//        String passOrFail = (score >= 60) ? "PASS" : "FAIL";
+//
+//        System.out.println(passOrFail);
+
+//        int number = 4;
+//
+//        String evenOrOdd = (number % 2 == 0) ? "EVEN" : "ODD";
+//
+//        System.out.println(evenOrOdd);
+
+//        int hours = 13;
+//
+//        String timeOfDay = (hours < 12) ? "A.M." : "P.M.";
+//        System.out.println(timeOfDay);
+//
+        int income = 62400;
+
+        double taxRate = (income >= 40000) ? 0.25 : 0.15;
+
+        System.out.println(taxRate);
 
 
 
-        scanner.close();
+//        if(score >= 60){
+//            System.out.println("PASS");
+//        }
+//        else{
+//            System.out.println("FAIL");
+//        }
 
 
     }
