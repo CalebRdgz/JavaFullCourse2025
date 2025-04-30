@@ -605,24 +605,79 @@ public class Main {
         //TEMPERATURE CONVERTER
 
         //declare variables
-        Scanner scanner = new Scanner(System.in);
-        double temp;
-        double newTemp;
-        String unit;
+//        Scanner scanner = new Scanner(System.in);
+//        double temp;
+//        double newTemp;
+//        String unit;
+//
+//        //welcome message
+//        System.out.print("Enter the temperature: ");
+//        temp = scanner.nextDouble();
+//
+//        System.out.print("Convert to celcius or Fahrenheit? (C or F): ");
+//        unit = scanner.next().toUpperCase();
+//
+//        // (condition) ? true : false;
+//
+//        newTemp = (unit.equals("C")) ? (temp - 32) * 5 / 9 : (temp * 9 / 5) + 32;
+//
+//        System.out.printf("%.1f°%s", newTemp, unit);
+//        scanner.close();
 
-        //welcome message
-        System.out.print("Enter the temperature: ");
-        temp = scanner.nextDouble();
+        // Enhanced switch = A replacement to many else if statements (Java14 feature)
 
-        System.out.print("Convert to celcius or Fahrenheit? (C or F): ");
-        unit = scanner.next().toUpperCase();
+        //Optimize this code using a switch:
+//        String day = "PizzaDay";
+//
+//        if(day.equals("Monday")){
+//            System.out.println("It is a weekday");
+//        }
+//        else if(day.equals("Tuesday")){
+//            System.out.println("It is a weekday");
+//        }
+//        else if(day.equals("Wednesday")){
+//            System.out.println("It is a weekday");
+//        }
+//        else if(day.equals("Thursday")){
+//            System.out.println("It is a weekday");
+//        }
+//        else if(day.equals("Friday")){
+//            System.out.println("It is a weekday");
+//        }
+//        else if(day.equals("Saturday")){
+//            System.out.println("It is a weekend");
+//        }
+//        else if(day.equals("Sunday")){
+//            System.out.println("It is a weekend");
+//        }
+//        else{
+//            System.out.println(day + " is not a day");
+//        }
 
-        // (condition) ? true : false;
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the day of the week: ");
+//        String day = scanner.nextLine();
+//
+//        //enhanced switch:
+//        switch(day){
+//            case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" -> System.out.println("It is a weekday 🤕");
+//            case "Saturday", "Sunday" -> System.out.println("It is is the weekend 😄");
+//            default -> System.out.println(day + " is not a day");
+//        }
+//
+////        switch(day){
+////            case "Monday" -> System.out.println("It is a weekday 🤕");//(arrow = do this code)
+////            case "Tuesday" -> System.out.println("It is a weekday 🤕");
+////            case "Wednesday" -> System.out.println("It is a weekday 🤕");
+////            case "Thursday" -> System.out.println("It is a weekday 🤕");
+////            case "Friday" -> System.out.println("It is a weekday 🤕");
+////            case "Saturday" -> System.out.println("It is the weekend 😄");
+////            case "Sunday" -> System.out.println("It is is the weekend 😄");
+////            default -> System.out.println(day + " is not a day");
+////        }
+//
+//        scanner.close();
 
-        newTemp = (unit.equals("C")) ? (temp - 32) * 5 / 9 : (temp * 9 / 5) + 32;
-
-        System.out.printf("%.1f°%s", newTemp, unit);
-        scanner.close();
-
+        //
     }
 }
