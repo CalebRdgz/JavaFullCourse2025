@@ -679,50 +679,90 @@ public class Main {
 //        scanner.close();
 
         //CALCULATOR PROGRAM
+//        Scanner scanner = new Scanner(System.in);
+//
+//        double num1;
+//        double num2;
+//        char operator;
+//        double result = 0;
+//        boolean validOperation = true;
+//
+//        System.out.print("Enter the first number: ");
+//        num1 = scanner.nextDouble();
+//
+//        System.out.print("Enter an operator: (+, -, *, /, ^): ");
+//
+//        operator = scanner.next().charAt(0); //just get the first letter of user input, keeping it a char instead of a string
+//
+//        System.out.print("Enter the second number: ");
+//        num2 = scanner.nextDouble();
+//
+//        //enhanced switch to examine user operator against our cases:
+//        switch (operator){
+//            case '+' -> result = num1 + num2;
+//            case '-' -> result = num1 - num2;
+//            case '*' -> result = num1 * num2;
+//            case '/' -> {
+//                if(num2 == 0){
+//                    System.out.println("Cannot divide by zero!");
+//                    validOperation = false;
+//                }
+//                else{
+//                    result = num1 / num2;
+//                }
+//            }
+//            case '^' -> result = Math.pow(num1, num2);
+//            default -> {
+//                System.out.println("Invalid operator!");
+//                validOperation = false;
+//            }
+//        }
+//
+//        if(validOperation){
+//            System.out.println(result);
+//        }
+//
+//        scanner.close();
+
+        // && = AND
+        // !! = OR
+        // ! = NOT
+
         Scanner scanner = new Scanner(System.in);
+        // username must be between 4-12 characters
+        // username must NOT contain spaces, or underscores
 
-        double num1;
-        double num2;
-        char operator;
-        double result = 0;
-        boolean validOperation = true;
+        String username = "";
 
-        System.out.print("Enter the first number: ");
-        num1 = scanner.nextDouble();
+        System.out.print("Enter your username: ");
+        username = scanner.nextLine();
 
-        System.out.print("Enter an operator: (+, -, *, /, ^): ");
-
-        operator = scanner.next().charAt(0); //just get the first letter of user input, keeping it a char instead of a string
-
-        System.out.print("Enter the second number: ");
-        num2 = scanner.nextDouble();
-
-        //enhanced switch to examine user operator against our cases:
-        switch (operator){
-            case '+' -> result = num1 + num2;
-            case '-' -> result = num1 - num2;
-            case '*' -> result = num1 * num2;
-            case '/' -> {
-                if(num2 == 0){
-                    System.out.println("Cannot divide by zero!");
-                    validOperation = false;
-                }
-                else{
-                    result = num1 / num2;
-                }
-            }
-            case '^' -> result = Math.pow(num1, num2);
-            default -> {
-                System.out.println("Invalid operator!");
-                validOperation = false;
-            }
+        if(username.length() < 4 || username.length() > 12){
+            System.out.println("Username must be between 4-12 characters");
         }
-
-        if(validOperation){
-            System.out.println(result);
+        else if(username.contains(" ") || username.contains("_")){
+            System.out.println("Username must NOT contain spaces or underscores");
+        }
+        else{
+            System.out.println("Welcome " + username);
         }
 
         scanner.close();
+
+//        double temp = 35;
+//        boolean isSunny = true;
+//
+//        if(temp <= 30 && temp >= 0 && isSunny){
+//            System.out.println("The weather is GOOD😄");
+//            System.out.println("It is SUNNY outside ☀️");
+//        }
+//        else if(temp <= 30 && temp >= 0 && !isSunny){
+//            System.out.println("The weather is GOOD😄");
+//            System.out.println("It is CLOUDY outside ☁️");
+//        }
+//        else if(temp > 30 || temp < 0){
+//            System.out.println("The weather is bad 😫");
+//        }
 
     }
 }
