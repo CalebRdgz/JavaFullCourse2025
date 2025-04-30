@@ -589,13 +589,11 @@ public class Main {
 //        String timeOfDay = (hours < 12) ? "A.M." : "P.M.";
 //        System.out.println(timeOfDay);
 //
-        int income = 62400;
-
-        double taxRate = (income >= 40000) ? 0.25 : 0.15;
-
-        System.out.println(taxRate);
-
-
+//        int income = 62400;
+//
+//        double taxRate = (income >= 40000) ? 0.25 : 0.15;
+//
+//        System.out.println(taxRate);
 
 //        if(score >= 60){
 //            System.out.println("PASS");
@@ -604,6 +602,27 @@ public class Main {
 //            System.out.println("FAIL");
 //        }
 
+        //TEMPERATURE CONVERTER
+
+        //declare variables
+        Scanner scanner = new Scanner(System.in);
+        double temp;
+        double newTemp;
+        String unit;
+
+        //welcome message
+        System.out.print("Enter the temperature: ");
+        temp = scanner.nextDouble();
+
+        System.out.print("Convert to celcius or Fahrenheit? (C or F): ");
+        unit = scanner.next().toUpperCase();
+
+        // (condition) ? true : false;
+
+        newTemp = (unit.equals("C")) ? (temp - 32) * 5 / 9 : (temp * 9 / 5) + 32;
+
+        System.out.printf("%.1f°%s", newTemp, unit);
+        scanner.close();
 
     }
 }
