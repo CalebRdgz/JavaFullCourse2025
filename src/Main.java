@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.Random;
 public class Main {
@@ -1019,22 +1020,35 @@ public class Main {
         // method signature = name + parameters (no two methods can share a signature)
 //        System.out.println(add(1, 2, 3, 4));
 
-        String pizza = bakePizza("flat bread", "mozzarella", "pepperoni");
+//        String pizza = bakePizza("flat bread", "mozzarella", "pepperoni");
+//
+//        System.out.println(pizza);
 
-        System.out.println(pizza);
+        //variable scope = where a variable can be accessed
+        //Local scope = Inside of a method, if you declare a variable, it has a local scope
+        int x = 1; //LOCAL VARIABLE SCOPE
 
+        System.out.println(x);
+
+        doSomething();
+    }
+    static int x = 3; //CLASS VARIABLE SCOPE (NO METHOD. OUT IN THE STREET)
+
+    static void doSomething(){
+        int x = 2; //LOCAL VARIABLE SCOPE
+        System.out.println(x);
     }
     // OVERLOADED METHODS:
-    static String bakePizza(String bread){
-        return bread + " pizza";
-    }
-
-    static String bakePizza(String bread, String cheese){
-        return cheese + " " + bread + " pizza";
-
-    }static String bakePizza(String bread, String cheese, String topping){
-        return topping + " " + cheese + " " + bread + " pizza";
-    }
+//    static String bakePizza(String bread){
+//        return bread + " pizza";
+//    }
+//
+//    static String bakePizza(String bread, String cheese){
+//        return cheese + " " + bread + " pizza";
+//
+//    }static String bakePizza(String bread, String cheese, String topping){
+//        return topping + " " + cheese + " " + bread + " pizza";
+//    }
 
 //    static double add(double a, double b){
 //        return a + b;
