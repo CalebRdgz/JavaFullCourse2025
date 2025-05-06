@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 public class Main {
 
-    public static void main(String[] args){ //need this method so that our program can run
+    public static void main(String[] args) { //need this method so that our program can run
 
         //THIS IS MY FIRST JAVA PROGRAM
 
@@ -852,35 +852,70 @@ public class Main {
 
         //NUMBER GUESSING GAME
 
-        Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
+//        Random random = new Random();
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int guess; //guess a random number between 1 - 100
+//        int attempts = 0; //amount of attempts it took the user to geuss the right nunber
+//        int min = 1;
+//        int max = 100;
+//        int randomNumber = random.nextInt(min, max + 1); //generate a random number between range min - max
+//
+//        System.out.println("Number Guessing Game");
+//        System.out.printf("Guess a number between %d-%d:\n", min, max);
+//
+//        do{
+//            System.out.print("Enter a guess: ");
+//            guess = scanner.nextInt();
+//            attempts++;
+//
+//            if(guess < randomNumber){
+//                System.out.println("TOO LOW! Try again");
+//            }
+//            else if(guess > randomNumber){
+//                System.out.println("TOO HIGH! Try again");
+//            }
+//            else{
+//                System.out.println("CORRECT! The number was " + randomNumber);
+//                System.out.println("# of attempts " + attempts);
+//            }
+//        }while(guess != randomNumber);
+//
+//        scanner.close();
 
-        int guess; //guess a random number between 1 - 100
-        int attempts = 0; //amount of attempts it took the user to geuss the right nunber
-        int min = 1;
-        int max = 100;
-        int randomNumber = random.nextInt(min, max + 1); //generate a random number between range min - max
+        //for loop = execute some code a CERTAIN amount of times
+//        for(int i = 10; i > 0; i-=3){
+//            System.out.println(i);
+//        }
 
-        System.out.println("Number Guessing Game");
-        System.out.printf("Guess a number between %d-%d:\n", min, max);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter how many times you want to loop: ");
+//        int max = scanner.nextInt();
+//
+//        for(int i = 1; i <= max; i++){
+//            System.out.println(i);
+//        }
+//
+//        scanner.close();
 
-        do{
-            System.out.print("Enter a guess: ");
-            guess = scanner.nextInt();
-            attempts++;
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("How many seconds to countdown from?");
+//        int start = scanner.nextInt();
+//
+//        scanner.close();
+//
+////        int start = 10;
+//
+//        for(int i = start; i > 0; i--){
+//            System.out.println(i);
+//            Thread.sleep(1000);
+//        }
+//
+//        System.out.println("HAPPY NEW YEAR!");
 
-            if(guess < randomNumber){
-                System.out.println("TOO LOW! Try again");
-            }
-            else if(guess > randomNumber){
-                System.out.println("TOO HIGH! Try again");
-            }
-            else{
-                System.out.println("CORRECT! The number was " + randomNumber);
-                System.out.println("# of attempts " + attempts);
-            }
-        }while(guess != randomNumber);
 
-        scanner.close();
+
     }
 }
