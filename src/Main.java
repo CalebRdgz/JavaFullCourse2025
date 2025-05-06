@@ -767,7 +767,7 @@ public class Main {
         //WHILE LOOPS = repeat some code forever
         //              while some condition remains true
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
 //        int age = 0;
 //
@@ -850,5 +850,37 @@ public class Main {
 //
 //        }
 
+        //NUMBER GUESSING GAME
+
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+
+        int guess; //guess a random number between 1 - 100
+        int attempts = 0; //amount of attempts it took the user to geuss the right nunber
+        int min = 1;
+        int max = 100;
+        int randomNumber = random.nextInt(min, max + 1); //generate a random number between range min - max
+
+        System.out.println("Number Guessing Game");
+        System.out.printf("Guess a number between %d-%d:\n", min, max);
+
+        do{
+            System.out.print("Enter a guess: ");
+            guess = scanner.nextInt();
+            attempts++;
+
+            if(guess < randomNumber){
+                System.out.println("TOO LOW! Try again");
+            }
+            else if(guess > randomNumber){
+                System.out.println("TOO HIGH! Try again");
+            }
+            else{
+                System.out.println("CORRECT! The number was " + randomNumber);
+                System.out.println("# of attempts " + attempts);
+            }
+        }while(guess != randomNumber);
+
+        scanner.close();
     }
 }
