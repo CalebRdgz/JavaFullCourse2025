@@ -1015,7 +1015,38 @@ public class Main {
 //        }
 
 
+        // overloaded methods = methods that share the same name, but different parameters
+        // method signature = name + parameters (no two methods can share a signature)
+//        System.out.println(add(1, 2, 3, 4));
+
+        String pizza = bakePizza("flat bread", "mozzarella", "pepperoni");
+
+        System.out.println(pizza);
+
     }
+    // OVERLOADED METHODS:
+    static String bakePizza(String bread){
+        return bread + " pizza";
+    }
+
+    static String bakePizza(String bread, String cheese){
+        return cheese + " " + bread + " pizza";
+
+    }static String bakePizza(String bread, String cheese, String topping){
+        return topping + " " + cheese + " " + bread + " pizza";
+    }
+
+//    static double add(double a, double b){
+//        return a + b;
+//    }
+//
+//    static double add(double a, double b, double c){
+//        return a + b + c;
+//    }
+//
+//    static double add(double a, double b, double c, double d){
+//        return a + b + c + d;
+//    }
 
     //METHODS - outside of the main method:
 //    static void happyBirthday(String birthdayBoy, int age){
