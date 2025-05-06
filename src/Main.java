@@ -1026,18 +1026,105 @@ public class Main {
 
         //variable scope = where a variable can be accessed
         //Local scope = Inside of a method, if you declare a variable, it has a local scope
-        int x = 1; //LOCAL VARIABLE SCOPE
+//        int x = 1; //LOCAL VARIABLE SCOPE
+//
+//        System.out.println(x);
+//
+//        doSomething();
 
-        System.out.println(x);
+        // JAVA BANKING PROGRAM FOR BEGINNERS
 
-        doSomething();
+        // DECLARE VARIABLES
+        double balance = 0;
+        boolean isRunning = true;
+        int choice; //user will make a choice to show balance, deposit, or withdraw
+
+        while(isRunning){
+            // DISPLAY MENU
+            System.out.println("***************");
+            System.out.println("BANKING PROGRAM");
+            System.out.println("***************");
+            System.out.println("1. Show Balance");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Exit");
+            System.out.println("***************");
+
+
+            // GET AND PROCESS USERS CHOICE
+            System.out.print("Enter your choice: (1-4): ");
+            choice = scanner.nextInt();
+
+            switch(choice){
+                case 1 -> showBalance(balance);
+                case 2 -> balance += deposit();
+                case 3 -> balance -= withdraw(balance);
+                case 4 -> isRunning = false;
+                default -> System.out.println("Invalid choice!");
+            }
+        }
+
+        // showBalance()
+        // deposit()
+        // withdraw()
+
+        // EXIT MESSAGE
+        System.out.println("***************");
+        System.out.println("Thank you! Have a nice day!");
+        System.out.println("***************");
+        scanner.close();
     }
-    static int x = 3; //CLASS VARIABLE SCOPE (NO METHOD. OUT IN THE STREET)
+    //CLASS SCOPE SCANNER:
+    static Scanner scanner = new Scanner(System.in);
 
-    static void doSomething(){
-        int x = 2; //LOCAL VARIABLE SCOPE
-        System.out.println(x);
+
+    //showBalance():
+    static void showBalance(double balance){
+        System.out.println("***************");
+        System.out.printf("$%.2f\n", balance);
     }
+
+    static double deposit(){
+
+        double amount;
+
+        System.out.print("Enter an amount to be deposited: ");
+        amount = scanner.nextDouble();
+
+        if(amount < 0){
+            System.out.println("Amount can't be negative");
+            return 0;
+        }
+        else{
+            return amount;
+        }
+    }
+
+    static double withdraw(double balance){
+        double amount;
+
+        System.out.print("Enter an amount to be withdrawn: ");
+        amount = scanner.nextDouble();
+
+        if(amount > balance) {
+            System.out.println("INSUFFICIENT FUNDS");
+            return 0;
+        }
+        else if(amount < 0){
+            System.out.println("Amount can't be negative");
+            return 0;
+        }
+        else{
+            return amount;
+        }
+    }
+
+//    static int x = 3; //CLASS VARIABLE SCOPE (NO METHOD. OUT IN THE STREET)
+
+//    static void doSomething(){
+//        int x = 2; //LOCAL VARIABLE SCOPE
+//        System.out.println(x);
+//    }
     // OVERLOADED METHODS:
 //    static String bakePizza(String bread){
 //        return bread + " pizza";
