@@ -459,7 +459,7 @@ public class Main {
 //        System.out.printf("The price of a ticket is: $%.2f", price);
 
         //STRING METHODS
-        String name = "Password";
+//        String name = "Password";
 
 //        int length = name.length(); //get the length of name
 //        char letter = name.charAt(0); //get the char at index 0
@@ -728,26 +728,26 @@ public class Main {
         // !! = OR
         // ! = NOT
 
-        Scanner scanner = new Scanner(System.in);
-        // username must be between 4-12 characters
-        // username must NOT contain spaces, or underscores
-
-        String username = "";
-
-        System.out.print("Enter your username: ");
-        username = scanner.nextLine();
-
-        if(username.length() < 4 || username.length() > 12){
-            System.out.println("Username must be between 4-12 characters");
-        }
-        else if(username.contains(" ") || username.contains("_")){
-            System.out.println("Username must NOT contain spaces or underscores");
-        }
-        else{
-            System.out.println("Welcome " + username);
-        }
-
-        scanner.close();
+//        Scanner scanner = new Scanner(System.in);
+//        // username must be between 4-12 characters
+//        // username must NOT contain spaces, or underscores
+//
+//        String username = "";
+//
+//        System.out.print("Enter your username: ");
+//        username = scanner.nextLine();
+//
+//        if(username.length() < 4 || username.length() > 12){
+//            System.out.println("Username must be between 4-12 characters");
+//        }
+//        else if(username.contains(" ") || username.contains("_")){
+//            System.out.println("Username must NOT contain spaces or underscores");
+//        }
+//        else{
+//            System.out.println("Welcome " + username);
+//        }
+//
+//        scanner.close();
 
 //        double temp = 35;
 //        boolean isSunny = true;
@@ -762,6 +762,92 @@ public class Main {
 //        }
 //        else if(temp > 30 || temp < 0){
 //            System.out.println("The weather is bad 😫");
+//        }
+
+        //WHILE LOOPS = repeat some code forever
+        //              while some condition remains true
+
+        Scanner scanner = new Scanner(System.in);
+
+//        int age = 0;
+//
+//        System.out.print("Enter your age: ");
+//        age = scanner.nextInt();
+
+//        while(age < 0){
+//            System.out.println("Your age can't be negative");
+//            System.out.print("Enter your age: ");
+//            age = scanner.nextInt();
+//        }
+//        System.out.println("You are " + age + " years old");
+
+        // DO WHILE LOOP:
+//        do{ //do this code first:
+//            System.out.println("Your age can't be negative");
+//            System.out.print("Enter your age: ");
+//            age = scanner.nextInt();
+//        }while(age < 0); // check this condition at the end.
+//
+//        System.out.println("You are " + age + " years old");
+
+//        int number = 0;
+//
+////        while(number < 1 || number > 10){
+////            System.out.print("Enter a number between 1 - 10: ");
+////            number = scanner.nextInt();
+////        }
+//
+////        System.out.println("You picked " + number);
+//
+//        //convert to a do while loop:
+//        do{
+//            System.out.print("Enter a number between 1 - 10: ");
+//            number = scanner.nextInt();
+//        }while(number < 1 || number > 10);
+//
+//        System.out.println("You picked " + number);
+//
+//
+//        scanner.close();
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String name = "";
+//
+//        while(name.isEmpty()){
+//            System.out.print("Enter your name: ");
+//            name = scanner.nextLine();
+//        }
+//
+//        System.out.println("Hello " + name);
+//
+//        scanner.close();
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String response = "";
+//
+//        while(!response.equals("Q")){
+//            System.out.println("You are playing a game");
+//            System.out.println("Press Q to quit");
+//            response = scanner.next().toUpperCase(); //.next() for a single character
+//        }
+//
+//        System.out.println("You have quit the game");
+//
+//        scanner.close();
+
+
+
+        //WARNING: INFINITE LOOP: (always update the condition inside a while loop)
+//        while(1 == 1){
+//            System.out.println("HELP! I'M STUCK IN A LOOP!");
+//        }
+
+//        if(name.isEmpty()){
+//            System.out.print("Enter your name: ");
+//            name = scanner.nextLine();
+//
 //        }
 
     }
