@@ -954,32 +954,99 @@ public class Main {
 
         //create a matrix of a symbol that user types in. user sets rows and columns of matrix
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int rows;
+//        int columns;
+//        char symbol;
+//
+//        System.out.print("Enter the # of rows: ");
+//        rows = scanner.nextInt();
+//
+//        System.out.print("Enter the # of columns: ");
+//        columns = scanner.nextInt();
+//
+//        System.out.print("Enter the symbol to use: ");
+//        symbol = scanner.next().charAt(0);
+//
+//        for(int i = 0; i < rows; i++){
+//
+//            for(int j = 0; j < columns; j++){
+//                System.out.print(symbol);
+//            }
+//            System.out.println();
+//        }
+//
+//
+//        scanner.close();
 
-        int rows;
-        int columns;
-        char symbol;
+        //method = a block of reusable code that is executed when called ()
 
-        System.out.print("Enter the # of rows: ");
-        rows = scanner.nextInt();
+        //methods are NOT familiar with variables inside OTHER methods
 
-        System.out.print("Enter the # of columns: ");
-        columns = scanner.nextInt();
+//        System.out.println("Happy Birthday to you!");
+//        System.out.println("Happy Birthday dear you!");
+//        System.out.println("You are x years old!");
+//        System.out.println("Happy Birthday to you!");
 
-        System.out.print("Enter the symbol to use: ");
-        symbol = scanner.next().charAt(0);
+        //methods are NOT familiar with variables inside OTHER methods, unless in arguments:
+//        String name = "Patrick";
+//        int age = 38;
+//
+//        happyBirthday(name, age);
 
-        for(int i = 0; i < rows; i++){
+//        double result = square(3);
+//        System.out.println(result);
+        //OR:
+//        System.out.println(square(3));
 
-            for(int j = 0; j < columns; j++){
-                System.out.print(symbol);
-            }
-            System.out.println();
-        }
+//        System.out.println(cube(3));
 
-
-        scanner.close();
+        //return = send the result of the "getFullName" method back to "fullName" variable:
+//        String fullName = getFullName("Spongebob", "Squarepants");
+//        System.out.println(fullName);
+//
+//        int age = 12;
+//        if(ageCheck(age)){
+//            System.out.println("You may sign up!");
+//        }
+//        else{
+//            System.out.println("You must be 18+ to sign up");
+//        }
 
 
     }
+
+    //METHODS - outside of the main method:
+//    static void happyBirthday(String birthdayBoy, int age){
+//        System.out.println("Happy Birthday to you!");
+//        //methods are NOT familiar with variables inside OTHER methods, unless in arguments:
+//        System.out.printf("Happy Birthday dear %s!\n", birthdayBoy);
+//        System.out.printf("You are %d years old!\n", age);
+//        System.out.println("Happy Birthday to you!\n");
+//    }
+//
+//    static double square(double number){
+//        return number * number;
+//    }
+//
+//    static double cube(double number){
+//        return number * number * number;
+//    }
+//
+//    //method that returns a full name after being given a first name and last name:
+//    static String getFullName(String first, String last){
+//        return first + " " + last;
+//    }
+//
+//    //method to check user's age:
+//    static boolean ageCheck(int age){
+//        if(age >= 18){
+//            return true;
+//        }
+//        else{
+//            return false;
+//        }
+//    }
+
 }
