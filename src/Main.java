@@ -1035,89 +1035,179 @@ public class Main {
         // JAVA BANKING PROGRAM FOR BEGINNERS
 
         // DECLARE VARIABLES
-        double balance = 0;
-        boolean isRunning = true;
-        int choice; //user will make a choice to show balance, deposit, or withdraw
+//        double balance = 0;
+//        boolean isRunning = true;
+//        int choice; //user will make a choice to show balance, deposit, or withdraw
+//
+//        while(isRunning){
+//            // DISPLAY MENU
+//            System.out.println("***************");
+//            System.out.println("BANKING PROGRAM");
+//            System.out.println("***************");
+//            System.out.println("1. Show Balance");
+//            System.out.println("2. Deposit");
+//            System.out.println("3. Withdraw");
+//            System.out.println("4. Exit");
+//            System.out.println("***************");
+//
+//
+//            // GET AND PROCESS USERS CHOICE
+//            System.out.print("Enter your choice: (1-4): ");
+//            choice = scanner.nextInt();
+//
+//            switch(choice){
+//                case 1 -> showBalance(balance);
+//                case 2 -> balance += deposit();
+//                case 3 -> balance -= withdraw(balance);
+//                case 4 -> isRunning = false;
+//                default -> System.out.println("Invalid choice!");
+//            }
+//        }
+//
+//        // showBalance()
+//        // deposit()
+//        // withdraw()
+//
+//        // EXIT MESSAGE
+//        System.out.println("***************");
+//        System.out.println("Thank you! Have a nice day!");
+//        System.out.println("***************");
+//        scanner.close();
 
-        while(isRunning){
-            // DISPLAY MENU
-            System.out.println("***************");
-            System.out.println("BANKING PROGRAM");
-            System.out.println("***************");
-            System.out.println("1. Show Balance");
-            System.out.println("2. Deposit");
-            System.out.println("3. Withdraw");
-            System.out.println("4. Exit");
-            System.out.println("***************");
+        // JAVA DICE ROLLER PROGRAM
 
+        // DECLARE VARIABLES
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        //number of dice by user:
+        int numOfDice;
+        int total = 0;
 
-            // GET AND PROCESS USERS CHOICE
-            System.out.print("Enter your choice: (1-4): ");
-            choice = scanner.nextInt();
+        // GET # OF DICE FROM THE USER
+        System.out.print("Enter the # of dice to roll: ");
+        numOfDice = scanner.nextInt();
 
-            switch(choice){
-                case 1 -> showBalance(balance);
-                case 2 -> balance += deposit();
-                case 3 -> balance -= withdraw(balance);
-                case 4 -> isRunning = false;
-                default -> System.out.println("Invalid choice!");
+        // CHECK IF # OF DICE IS GREATER THAN 0
+        if(numOfDice > 0){
+            // ROLL ALL THE DICE
+            for(int i = 0; i < numOfDice; i++){
+                int roll = random.nextInt(1, 7); //num between 1 and 6
+                printDie(roll);
+                System.out.println("You rolled: " + roll);
+                // GET THE TOTAL
+                total += roll;
             }
+            System.out.println("Total: " + total);
+
         }
+        else{
+            System.out.println("# of dice must be greater than 0");
+        }
+        // DISPLAY ASCII ART OF DICE (METHOD)
 
-        // showBalance()
-        // deposit()
-        // withdraw()
-
-        // EXIT MESSAGE
-        System.out.println("***************");
-        System.out.println("Thank you! Have a nice day!");
-        System.out.println("***************");
         scanner.close();
     }
+    //DISPLAY ASCII ART OF DICE METHOD:
+    static void printDie(int roll){
+        //MULTI LINE STRING:
+        String dice1 = """
+                  -------
+                 |       |
+                 |   ●   |
+                 |       |
+                  -------
+                """;
+        String dice2 = """
+                  -------
+                 | ●     |
+                 |       |
+                 |     ● |
+                  -------
+                """;
+        String dice3 = """
+                  -------
+                 | ●     |
+                 |   ●   |
+                 |     ● |
+                  -------
+                """;
+        String dice4 = """
+                  -------
+                 | ●   ● |
+                 |       |
+                 | ●   ● |
+                  -------
+                """;
+        String dice5 = """
+                  -------
+                 | ●   ● |
+                 |   ●   |
+                 | ●   ● |
+                  -------
+                """;
+        String dice6 = """
+                  -------
+                 | ●   ● |
+                 | ●   ● |
+                 | ●   ● |
+                  -------
+                """;
+        switch(roll){
+            case 1 -> System.out.println(dice1);
+            case 2 -> System.out.println(dice2);
+            case 3 -> System.out.println(dice3);
+            case 4 -> System.out.println(dice4);
+            case 5 -> System.out.println(dice5);
+            case 6 -> System.out.println(dice6);
+            default -> System.out.println("Invalid roll");
+        }
+    }
+
+
     //CLASS SCOPE SCANNER:
-    static Scanner scanner = new Scanner(System.in);
-
-
-    //showBalance():
-    static void showBalance(double balance){
-        System.out.println("***************");
-        System.out.printf("$%.2f\n", balance);
-    }
-
-    static double deposit(){
-
-        double amount;
-
-        System.out.print("Enter an amount to be deposited: ");
-        amount = scanner.nextDouble();
-
-        if(amount < 0){
-            System.out.println("Amount can't be negative");
-            return 0;
-        }
-        else{
-            return amount;
-        }
-    }
-
-    static double withdraw(double balance){
-        double amount;
-
-        System.out.print("Enter an amount to be withdrawn: ");
-        amount = scanner.nextDouble();
-
-        if(amount > balance) {
-            System.out.println("INSUFFICIENT FUNDS");
-            return 0;
-        }
-        else if(amount < 0){
-            System.out.println("Amount can't be negative");
-            return 0;
-        }
-        else{
-            return amount;
-        }
-    }
+//    static Scanner scanner = new Scanner(System.in);
+//
+//
+//    //showBalance():
+//    static void showBalance(double balance){
+//        System.out.println("***************");
+//        System.out.printf("$%.2f\n", balance);
+//    }
+//
+//    static double deposit(){
+//
+//        double amount;
+//
+//        System.out.print("Enter an amount to be deposited: ");
+//        amount = scanner.nextDouble();
+//
+//        if(amount < 0){
+//            System.out.println("Amount can't be negative");
+//            return 0;
+//        }
+//        else{
+//            return amount;
+//        }
+//    }
+//
+//    static double withdraw(double balance){
+//        double amount;
+//
+//        System.out.print("Enter an amount to be withdrawn: ");
+//        amount = scanner.nextDouble();
+//
+//        if(amount > balance) {
+//            System.out.println("INSUFFICIENT FUNDS");
+//            return 0;
+//        }
+//        else if(amount < 0){
+//            System.out.println("Amount can't be negative");
+//            return 0;
+//        }
+//        else{
+//            return amount;
+//        }
+//    }
 
 //    static int x = 3; //CLASS VARIABLE SCOPE (NO METHOD. OUT IN THE STREET)
 
