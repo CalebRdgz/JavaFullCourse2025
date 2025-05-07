@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 public class Main {
@@ -1077,91 +1078,116 @@ public class Main {
         // JAVA DICE ROLLER PROGRAM
 
         // DECLARE VARIABLES
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
-        //number of dice by user:
-        int numOfDice;
-        int total = 0;
+//        Scanner scanner = new Scanner(System.in);
+//        Random random = new Random();
+//        //number of dice by user:
+//        int numOfDice;
+//        int total = 0;
+//
+//        // GET # OF DICE FROM THE USER
+//        System.out.print("Enter the # of dice to roll: ");
+//        numOfDice = scanner.nextInt();
+//
+//        // CHECK IF # OF DICE IS GREATER THAN 0
+//        if(numOfDice > 0){
+//            // ROLL ALL THE DICE
+//            for(int i = 0; i < numOfDice; i++){
+//                int roll = random.nextInt(1, 7); //num between 1 and 6
+//                printDie(roll);
+//                System.out.println("You rolled: " + roll);
+//                // GET THE TOTAL
+//                total += roll;
+//            }
+//            System.out.println("Total: " + total);
+//
+//        }
+//        else{
+//            System.out.println("# of dice must be greater than 0");
+//        }
+//        // DISPLAY ASCII ART OF DICE (METHOD)
+//
+//        scanner.close();
 
-        // GET # OF DICE FROM THE USER
-        System.out.print("Enter the # of dice to roll: ");
-        numOfDice = scanner.nextInt();
+        //array = a collection of values of the same data type
+        // * think of it as a variable that can store more than 1 value
 
-        // CHECK IF # OF DICE IS GREATER THAN 0
-        if(numOfDice > 0){
-            // ROLL ALL THE DICE
-            for(int i = 0; i < numOfDice; i++){
-                int roll = random.nextInt(1, 7); //num between 1 and 6
-                printDie(roll);
-                System.out.println("You rolled: " + roll);
-                // GET THE TOTAL
-                total += roll;
-            }
-            System.out.println("Total: " + total);
+        String[]  fruits = {"apple", "orange", "banana", "coconut"};
 
+//        fruits[1] = "pineapple";
+//        int numOfFruits = fruits.length;
+
+//        System.out.println(fruits[1]);
+//        System.out.println(numOfFruits);
+
+//        for(int i = 0; i < fruits.length; i++){
+//            System.out.print(fruits[i] + " ");
+//        }
+
+        Arrays.sort(fruits);
+        Arrays.fill(fruits, "pineapple");
+
+        //enhanced for loop (for each loop):
+        for(String fruit : fruits){
+            System.out.println(fruit);
         }
-        else{
-            System.out.println("# of dice must be greater than 0");
-        }
-        // DISPLAY ASCII ART OF DICE (METHOD)
 
-        scanner.close();
+
     }
     //DISPLAY ASCII ART OF DICE METHOD:
-    static void printDie(int roll){
-        //MULTI LINE STRING:
-        String dice1 = """
-                  -------
-                 |       |
-                 |   ●   |
-                 |       |
-                  -------
-                """;
-        String dice2 = """
-                  -------
-                 | ●     |
-                 |       |
-                 |     ● |
-                  -------
-                """;
-        String dice3 = """
-                  -------
-                 | ●     |
-                 |   ●   |
-                 |     ● |
-                  -------
-                """;
-        String dice4 = """
-                  -------
-                 | ●   ● |
-                 |       |
-                 | ●   ● |
-                  -------
-                """;
-        String dice5 = """
-                  -------
-                 | ●   ● |
-                 |   ●   |
-                 | ●   ● |
-                  -------
-                """;
-        String dice6 = """
-                  -------
-                 | ●   ● |
-                 | ●   ● |
-                 | ●   ● |
-                  -------
-                """;
-        switch(roll){
-            case 1 -> System.out.println(dice1);
-            case 2 -> System.out.println(dice2);
-            case 3 -> System.out.println(dice3);
-            case 4 -> System.out.println(dice4);
-            case 5 -> System.out.println(dice5);
-            case 6 -> System.out.println(dice6);
-            default -> System.out.println("Invalid roll");
-        }
-    }
+//    static void printDie(int roll){
+//        //MULTI LINE STRING:
+//        String dice1 = """
+//                  -------
+//                 |       |
+//                 |   ●   |
+//                 |       |
+//                  -------
+//                """;
+//        String dice2 = """
+//                  -------
+//                 | ●     |
+//                 |       |
+//                 |     ● |
+//                  -------
+//                """;
+//        String dice3 = """
+//                  -------
+//                 | ●     |
+//                 |   ●   |
+//                 |     ● |
+//                  -------
+//                """;
+//        String dice4 = """
+//                  -------
+//                 | ●   ● |
+//                 |       |
+//                 | ●   ● |
+//                  -------
+//                """;
+//        String dice5 = """
+//                  -------
+//                 | ●   ● |
+//                 |   ●   |
+//                 | ●   ● |
+//                  -------
+//                """;
+//        String dice6 = """
+//                  -------
+//                 | ●   ● |
+//                 | ●   ● |
+//                 | ●   ● |
+//                  -------
+//                """;
+//        switch(roll){
+//            case 1 -> System.out.println(dice1);
+//            case 2 -> System.out.println(dice2);
+//            case 3 -> System.out.println(dice3);
+//            case 4 -> System.out.println(dice4);
+//            case 5 -> System.out.println(dice5);
+//            case 6 -> System.out.println(dice6);
+//            default -> System.out.println("Invalid roll");
+//        }
+//    }
 
 
     //CLASS SCOPE SCANNER:
