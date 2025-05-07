@@ -1111,7 +1111,7 @@ public class Main {
         //array = a collection of values of the same data type
         // * think of it as a variable that can store more than 1 value
 
-        String[]  fruits = {"apple", "orange", "banana", "coconut"};
+//        String[]  fruits = {"apple", "orange", "banana", "coconut"};
 
 //        fruits[1] = "pineapple";
 //        int numOfFruits = fruits.length;
@@ -1123,13 +1123,41 @@ public class Main {
 //            System.out.print(fruits[i] + " ");
 //        }
 
-        Arrays.sort(fruits);
-        Arrays.fill(fruits, "pineapple");
+//        Arrays.sort(fruits);
+//        Arrays.fill(fruits, "pineapple");
+//
+//        //enhanced for loop (for each loop):
+//        for(String fruit : fruits){
+//            System.out.println(fruit);
+//        }
 
-        //enhanced for loop (for each loop):
-        for(String fruit : fruits){
-            System.out.println(fruit);
-        }
+        // Enter user input into array:
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String[] foods;
+//        int size;
+//
+//        System.out.print("What number of food do you want?: ");
+//        size = scanner.nextInt();
+//        scanner.nextLine(); //capture that \n after a scanner
+//
+//        foods = new String[size];
+//
+////        foods[0] = "pizza";
+////        foods[1] = "taco";
+////        foods[2] = "hamburger";
+//
+//        for(int i = 0; i < foods.length; i++){
+//            System.out.print("Enter a food: ");
+//            foods[i] = scanner.nextLine();
+//        }
+//
+//        for(String food : foods){
+//            System.out.println(food);
+//        }
+//
+////        System.out.println(foods.length);
+//        scanner.close();
 
 
     }
