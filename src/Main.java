@@ -1160,35 +1160,71 @@ public class Main {
 //        scanner.close();
 
         //search an array:
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//
+//        int[] numbers = {1, 9, 2, 8, 3, 5, 4};
+//        String[] fruits = {"apple", "orange", "banana"};
+//        boolean isFound = false;
+//        String target;
+////        int target = 1;
+//
+//        while(!isFound){
+//            System.out.print("Enter a fruit to search for: ");
+//            target = scanner.nextLine();
+//
+//            //linear search:
+//            for(int i = 0; i < fruits.length; i++){
+//                if(fruits[i].equals(target)){
+//                    System.out.println("Element found at index: " + i);
+//                    isFound = true;
+//                    break;
+//                }
+//            }
+//
+//            if(!isFound){
+//                System.out.println("Element not found in the array");
+//            }
+//        }
+//
+//        scanner.close();
 
+        // varargs (variable arguments) = allows a method to accept ANY # of arguments
+        // makes methods more flexible, no need for overloaded methods
+        // java will pack the arguments into an array
+        // ,,, (ellipsis)
 
-        int[] numbers = {1, 9, 2, 8, 3, 5, 4};
-        String[] fruits = {"apple", "orange", "banana"};
-        boolean isFound = false;
-        String target;
-//        int target = 1;
+        System.out.println(add(1, 2, 3, 4, 5, 6));
 
-        while(!isFound){
-            System.out.print("Enter a fruit to search for: ");
-            target = scanner.nextLine();
+        System.out.println(average(1, 2, 3, 4, 5, 6, 7));
+        System.out.println(average());
+    }
 
-            //linear search:
-            for(int i = 0; i < fruits.length; i++){
-                if(fruits[i].equals(target)){
-                    System.out.println("Element found at index: " + i);
-                    isFound = true;
-                    break;
-                }
-            }
+    static int add(int... numbers){
+        int sum = 0;
 
-            if(!isFound){
-                System.out.println("Element not found in the array");
-            }
+        for(int number : numbers){
+            sum += number;
         }
 
-        scanner.close();
+        return sum;
     }
+
+    static double average(double... numbers){
+        double sum = 0;
+
+        if(numbers.length == 0){
+            return 0;
+        }
+
+        for(double number : numbers){
+            sum += number;
+        }
+
+        return sum / numbers.length;
+    }
+
+
     //DISPLAY ASCII ART OF DICE METHOD:
 //    static void printDie(int roll){
 //        //MULTI LINE STRING:
