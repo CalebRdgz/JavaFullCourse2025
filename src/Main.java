@@ -1194,35 +1194,73 @@ public class Main {
         // java will pack the arguments into an array
         // ,,, (ellipsis)
 
-        System.out.println(add(1, 2, 3, 4, 5, 6));
+//        System.out.println(add(1, 2, 3, 4, 5, 6));
+//
+//        System.out.println(average(1, 2, 3, 4, 5, 6, 7));
+//        System.out.println(average());
 
-        System.out.println(average(1, 2, 3, 4, 5, 6, 7));
-        System.out.println(average());
+        // 2D ARRAYS = An array where each element is an array
+        // useful for storing a matrix of data
+//        String[] fruits = {"apple", "orange", "banana"};
+//        String[] vegetables = {"potato", "onion", "carrot"};
+//        String[] meats = {"chicken", "pork", "beef", "fish"};
+//
+//        //2d array:
+////        String[][] groceries = {fruits, vegetables, meats};
+//        String[][] groceries = {{"apple", "orange", "banana"},
+//                {"potato", "onion", "carrot"},
+//                {"chicken", "pork", "beef", "fish"}};
+//
+//        groceries[0][0] = "pineapple"; //row 0 column 0
+//        groceries[1][0] = "celery"; //row 1 column 0
+//        groceries[1][2] = "broccoli"; //row 1 column 2
+//        groceries[2][1] = "eggs"; //row 2 column 1
+//
+//
+//        for(String[] foods : groceries){
+//            for(String food: foods){
+//                System.out.print(food + " ");
+//            }
+//            System.out.println();
+//        }
+
+        //TELEPHONE NUMBER PAD 2D ARRAY:
+        char[][] telephone = {{'1', '2', '3'},
+                              {'4', '5', '6'},
+                              {'7', '8', '9'},
+                              {'*', '0', '#'}};
+
+        for(char[] row : telephone){
+            for(char number : row){
+                System.out.print(number + " ");
+            }
+            System.out.println();
+        }
     }
 
-    static int add(int... numbers){
-        int sum = 0;
-
-        for(int number : numbers){
-            sum += number;
-        }
-
-        return sum;
-    }
-
-    static double average(double... numbers){
-        double sum = 0;
-
-        if(numbers.length == 0){
-            return 0;
-        }
-
-        for(double number : numbers){
-            sum += number;
-        }
-
-        return sum / numbers.length;
-    }
+//    static int add(int... numbers){
+//        int sum = 0;
+//
+//        for(int number : numbers){
+//            sum += number;
+//        }
+//
+//        return sum;
+//    }
+//
+//    static double average(double... numbers){
+//        double sum = 0;
+//
+//        if(numbers.length == 0){
+//            return 0;
+//        }
+//
+//        for(double number : numbers){
+//            sum += number;
+//        }
+//
+//        return sum / numbers.length;
+//    }
 
 
     //DISPLAY ASCII ART OF DICE METHOD:
