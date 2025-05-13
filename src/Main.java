@@ -1,11 +1,9 @@
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 public class Main {
 
     public static void main(String[] args) { //need this method so that our program can run
-
         //THIS IS MY FIRST JAVA PROGRAM
 
         /*
@@ -1339,128 +1337,164 @@ public class Main {
         //JAVA SLOT MACHINE
 
         // DECLARE VARIABLES
-        Scanner scanner = new Scanner(System.in);
-        int balance = 100; // 100 dollars
-        int bet; // how much are we betting
-        int payout; // huw much do we win (add to balance)
-        String[] row;
-        String playAgain;
+//        Scanner scanner = new Scanner(System.in);
+//        int balance = 100; // 100 dollars
+//        int bet; // how much are we betting
+//        int payout; // huw much do we win (add to balance)
+//        String[] row;
+//        String playAgain;
+//
+//        // DISPLAY WELCOME MESSAGE
+//        System.out.println("**************************");
+//        System.out.println("  Welcome to Java Slots!  ");
+//        System.out.println(" Symbols: 🍒 🍉 🍋 🔔 ⭐️ ");
+//        System.out.println("**************************");
+//        // PLAY IF BALANCE > 0
+//        while (balance > 0) {
+//            System.out.println("Current balance: $" + balance);
+//            // ENTER BET AMOUNT
+//            System.out.print("Place your bet amount: ");
+//            bet = scanner.nextInt();
+//            scanner.nextLine(); //gets rid of the \n character after using scanner method^
+//            //      VERIFY IF BET > BALANCE
+//            if (bet > balance) {
+//                System.out.println("INSUFFICIENT FUNDS");
+//                continue;
+//            }
+//            //      VERIFY IF BET > 0
+//            else if (bet <= 0) {
+//                System.out.println("Bet must be greater than 0");
+//            } else {
+//                //      SUBTRACT BET FROM BALANCE
+//                balance -= bet;
+//                System.out.println("Current balance: $" + balance);
+//            }
+//
+//            System.out.println("Spinning...");
+//            row = spinRow();
+//            printRow(row);
+//            payout = getPayout(row, bet);
+//
+//            if (payout > 0) {
+//                System.out.println("You won $" + payout);
+//                balance += payout;
+//            } else {
+//                System.out.println("Sorry, you lost this round");
+//            }
+//
+//            // GET PAYOUT IF WIN
+//            getPayout(row, bet);
+//
+//            // ASK TO PLAY AGAIN?
+//            System.out.print("Do you want to play again?: (Y/N) ");
+//            playAgain = scanner.nextLine().toUpperCase();
+//
+//            if(!playAgain.equals("Y")) {
+//                break;
+//            }
+//        }
+//
+//        // DISPLAY EXIT MESSAGE
+//        System.out.println("GAME OVER! Your final balance is $" + balance);
+//
+//        scanner.close();
 
-        // DISPLAY WELCOME MESSAGE
-        System.out.println("**************************");
-        System.out.println("  Welcome to Java Slots!  ");
-        System.out.println(" Symbols: 🍒 🍉 🍋 🔔 ⭐️ ");
-        System.out.println("**************************");
-        // PLAY IF BALANCE > 0
-        while (balance > 0) {
-            System.out.println("Current balance: $" + balance);
-            // ENTER BET AMOUNT
-            System.out.print("Place your bet amount: ");
-            bet = scanner.nextInt();
-            scanner.nextLine(); //gets rid of the \n character after using scanner method^
-            //      VERIFY IF BET > BALANCE
-            if (bet > balance) {
-                System.out.println("INSUFFICIENT FUNDS");
-                continue;
-            }
-            //      VERIFY IF BET > 0
-            else if (bet <= 0) {
-                System.out.println("Bet must be greater than 0");
-            } else {
-                //      SUBTRACT BET FROM BALANCE
-                balance -= bet;
-                System.out.println("Current balance: $" + balance);
-            }
+        //OBJECT ORIENTED PROGRAMMING:
+        // Object = Represents a real world entity that holds data (attributes)
+        // and can perform actions (methods)
+        // It is a reference data type
+        // Objects can have things and do things
+        // Attributes = A person's name, age, height, weight
+        // Methods = A person can eat() and sleep()
 
-            System.out.println("Spinning...");
-            row = spinRow();
-            printRow(row);
-            payout = getPayout(row, bet);
+//    Scanner scanner = new Scanner(System.in);
+//    Random random = new Random();
+        Car car = new Car(); //our car object has the attributes
+        Car car2 = new Car();
 
-            if (payout > 0) {
-                System.out.println("You won $" + payout);
-                balance += payout;
-            } else {
-                System.out.println("Sorry, you lost this round");
-            }
+        //edit the attributes:
+//        car.isRunning = true;
 
-            // GET PAYOUT IF WIN
-            getPayout(row, bet);
+//        System.out.println(car.make);
+//        System.out.println(car.model);
+//        System.out.println(car.year);
+//        System.out.println(car.price);
+//        System.out.println(car.isRunning);
 
-            // ASK TO PLAY AGAIN?
-            System.out.print("Do you want to play again?: (Y/N) ");
-            playAgain = scanner.nextLine().toUpperCase();
+//        System.out.println(car.isRunning);
+//        car.start();
+//        System.out.println(car.isRunning);
+//        car.stop();
+//        System.out.println(car.isRunning);
 
-            if(!playAgain.equals("Y")) {
-                break;
-            }
-        }
+//        car.drive();
+//        car.brake();
 
-        // DISPLAY EXIT MESSAGE
-        System.out.println("GAME OVER! Your final balance is $" + balance);
+        System.out.println(car.make + " " + car.model);
 
-        scanner.close();
+        System.out.println(car2.make + " " + car2.model);
+
+
+
     }
 
     // SPIN ROW
-    static String[] spinRow() {
-
-        String[] symbols = {"🍒", "🍉", "🍋", "🔔", "⭐️"};
-        String[] row = new String[3];
-        Random random = new Random();
-
-        for (int i = 0; i < 3; i++) {
-            row[i] = symbols[random.nextInt(symbols.length)];
-        }
-        //testing:
-//        System.out.print(row[0] + row[1] + row[2]);
-
-        return row;
-    }
-
-    // PRINT ROW
-    static void printRow(String[] row) {
-        System.out.println("**************");
-        System.out.println(" " + String.join(" | ", row));
-        System.out.println("**************");
-
-    }
-
-    static int getPayout(String[] row, int bet) {
-        //if all symbols match:
-        if (row[0].equals(row[1]) && row[1].equals(row[2])) {
-            return switch (row[0]) {
-                case "🍒" -> bet * 3;
-                case "🍉" -> bet * 4;
-                case "🍋" -> bet * 5;
-                case "🔔" -> bet * 10;
-                case "️⭐️" -> bet * 20;
-                default -> 0;
-            };
-        }
-        else if (row[0].equals(row[1])) {
-            return switch (row[0]) {
-                case "🍒" -> bet * 2;
-                case "🍉" -> bet * 3;
-                case "🍋" -> bet * 4;
-                case "🔔" -> bet * 5;
-                case "️⭐️" -> bet * 10;
-                default -> 0;
-            };
-        }
-        else if (row[1].equals(row[2])) {
-            return switch (row[1]) {
-                case "🍒" -> bet * 2;
-                case "🍉" -> bet * 3;
-                case "🍋" -> bet * 4;
-                case "🔔" -> bet * 5;
-                case "️⭐️" -> bet * 10;
-                default -> 0;
-            };
-        }
-        return 0;
-
-    }
+//    static String[] spinRow() {
+//
+//        String[] symbols = {"🍒", "🍉", "🍋", "🔔", "⭐️"};
+//        String[] row = new String[3];
+//        Random random = new Random();
+//
+//        for (int i = 0; i < 3; i++) {
+//            row[i] = symbols[random.nextInt(symbols.length)];
+//        }
+//        //testing:
+////        System.out.print(row[0] + row[1] + row[2]);
+//
+//        return row;
+//    }
+//
+//    // PRINT ROW
+//    static void printRow(String[] row) {
+//        System.out.println("**************");
+//        System.out.println(" " + String.join(" | ", row));
+//        System.out.println("**************");
+//
+//    }
+//
+//    static int getPayout(String[] row, int bet) {
+//        //if all symbols match:
+//        if (row[0].equals(row[1]) && row[1].equals(row[2])) {
+//            return switch (row[0]) {
+//                case "🍒" -> bet * 3;
+//                case "🍉" -> bet * 4;
+//                case "🍋" -> bet * 5;
+//                case "🔔" -> bet * 10;
+//                case "️⭐️" -> bet * 20;
+//                default -> 0;
+//            };
+//        }
+//        else if (row[0].equals(row[1])) {
+//            return switch (row[0]) {
+//                case "🍒" -> bet * 2;
+//                case "🍉" -> bet * 3;
+//                case "🍋" -> bet * 4;
+//                case "🔔" -> bet * 5;
+//                case "️⭐️" -> bet * 10;
+//                default -> 0;
+//            };
+//        }
+//        else if (row[1].equals(row[2])) {
+//            return switch (row[1]) {
+//                case "🍒" -> bet * 2;
+//                case "🍉" -> bet * 3;
+//                case "🍋" -> bet * 4;
+//                case "🔔" -> bet * 5;
+//                case "️⭐️" -> bet * 10;
+//                default -> 0;
+//            };
+//        }
+//        return 0;
 
 //    static int add(int... numbers){
 //        int sum = 0;
