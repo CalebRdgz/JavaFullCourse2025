@@ -1529,6 +1529,32 @@ public class Main {
         // ,roudn() is a utility method for the Math class:
 //        Math.round(3.99);
 
+        // Inheritance = One class inherits the attributes and methods from another class.
+        // Child <- Parent <- Grandparent
+
+//        Dog dog = new Dog();
+//        Cat cat = new Cat();
+//        Plant plant = new Plant();
+
+//        System.out.println(dog.isAlive);
+//        System.out.println(cat.isAlive);
+//
+//        dog.eat();
+//        cat.eat();
+//
+//        System.out.println(dog.lives);
+//        System.out.println(cat.lives);
+//
+//        dog.speak();
+//        cat.speak();
+
+//        System.out.println(dog.isAlive);
+//        System.out.println(cat.isAlive);
+//
+//        System.out.println(plant.isAlive);
+//        plant.photosynthesize();
+
+
     }
 
     // SPIN ROW
