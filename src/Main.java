@@ -1492,23 +1492,42 @@ public class Main {
 //        Car[] cars = new Car[3]; //3 elements max
 //        Car[] cars = {car1, car2, car3};
         //pass in anonymous objects without initializing them^:
-        Car[] cars = {new Car("Mustang", "Red"),
-                      new Car("Corvette", "Blue"),
-                      new Car("Charger", "Yellow")};
-
-        //iterate through this array with for loop:
-//        for(int i = 0; i < cars.length; i++){
-//            cars[i].drive();
+//        Car[] cars = {new Car("Mustang", "Red"),
+//                      new Car("Corvette", "Blue"),
+//                      new Car("Charger", "Yellow")};
+//
+//        //iterate through this array with for loop:
+////        for(int i = 0; i < cars.length; i++){
+////            cars[i].drive();
+////        }
+//
+//        for(Car car : cars){
+//            car.color = "black";
+//        }
+//
+//        for(Car car : cars){
+//            car.drive();
 //        }
 
-        for(Car car : cars){
-            car.color = "black";
-        }
+        // static = Makes a variable or method belong to the class, rather than to any specific object
+        // Commonly used for utility methods or shared resources
 
-        for(Car car : cars){
-            car.drive();
-        }
+//        Friend friend1 = new Friend("Spongebob");
+//        Friend friend2 = new Friend("Patrick");
+//        Friend friend3 = new Friend("Squidward");
+//        Friend friend4 = new Friend("Sandy"); // numOfFriends = 4
+//        Friend friend5 = new Friend("Gary"); // numOfFriends = 5
 
+//        System.out.println(friend1.numOfFriends); //numOfFriends = 3
+//        System.out.println(friend2.numOfFriends); //numOfFriends = 3
+//        System.out.println(friend3.numOfFriends); //numOfFriends = 3
+
+        // access a static member by the name of the class itself:
+//        System.out.println(Friend.numOfFriends);
+//        Friend.showFriends();
+
+        // ,roudn() is a utility method for the Math class:
+//        Math.round(3.99);
 
     }
 
