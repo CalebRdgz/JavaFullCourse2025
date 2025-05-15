@@ -1558,18 +1558,29 @@ public class Main {
         // Used in constructors and method overriding
         // Calls the parent constructor to initialize attributes
 
-        Person person = new Person("Tom", "Riddle");
-        Student student = new Student("Harry", "Potter", 3.25);
-        Employee employee = new Employee("Caleb", "Rodriguez", 62400);
+//        Person person = new Person("Tom", "Riddle");
+//        Student student = new Student("Harry", "Potter", 3.25);
+//        Employee employee = new Employee("Caleb", "Rodriguez", 62400);
+//
+//        person.showName();
+//
+//        student.showName();
+//        System.out.println(student.gpa);
+//        student.showGPA();
+//
+//        employee.showName();
+//        employee.showSalary();
 
-        person.showName();
+        // Method overriding = When a subclass provides its own implementation of a method that is already defined.
+        // Allows for code reusability and give specific implementations.
 
-        student.showName();
-        System.out.println(student.gpa);
-        student.showGPA();
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Fish fish = new Fish();
 
-        employee.showName();
-        employee.showSalary();
+        dog.move();
+        cat.move();
+        fish.move();
 
 
     }
